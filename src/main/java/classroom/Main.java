@@ -1,3 +1,5 @@
+package classroom;
+
 public class Main {
     public static void main(String[] args) {
         int vecumsSuns = 3; //vesels skaitlis
@@ -56,7 +58,7 @@ public class Main {
         reizinajums = x * y;
         summa = x + y;
         starpība = x - y;
-        dalijums = t / k;
+
         double t = 5;
         double k = 6;
 
@@ -68,4 +70,4 @@ public class Main {
 
         System.out.println("Ruta");
     }
-}                     v
+}
