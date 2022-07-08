@@ -2,16 +2,17 @@ package hommework;
 
 public class Trissturis {
 
-    int mala1;
-    int mala2;
-    int mala3;
+    double mala1;
+    double mala2;
+    double mala3;
     double laukums;
 
-    public Trissturis(int mala1, int mala2, int mala3) {
+    public Trissturis(double mala1, double mala2, double mala3) {
         this.mala1 = mala1;
         this.mala2 = mala2;
         this.mala3 = mala3;
     }
+
 
     Trissturis(){
         System.out.println("Mēs šobrīd veidojam trijstūri");
@@ -21,15 +22,13 @@ public class Trissturis {
     }
 
 
-    public void trissturLaukums(int mala1, int mala2, int mala3) {
-        this.mala1 = mala1;
-        this.mala2 = mala2;
-        this.mala3 = mala3;
+    public double trissturaLaukums(double mala1, double mala2, double mala3) {
         this.laukums = laukums;
         double pusperimetrs= (mala1+mala2+mala3)/2;
         laukums= Math.sqrt(pusperimetrs*(pusperimetrs-mala1)*(pusperimetrs-mala2)*(pusperimetrs-mala3));
-        System.out.println("Trijstūra laukums ir "+ pusperimetrs+laukums);
+        return laukums;
     }
+
 
     public boolean irVienādsānu(){
      System.out.println("Vai trijstūris ir vienādsānu?");
