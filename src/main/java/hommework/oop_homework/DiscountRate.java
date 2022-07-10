@@ -8,34 +8,31 @@ public class DiscountRate {
     static private double productDiscountGold = 0.1;
     static private double productDiscountSilver = 0.1;
 
-    static public double getServiceDiscountRate(String type) {
-
-        if ("Premium".equalsIgnoreCase(type)) {
-            return serviceDiscountPremium;
+    public static double getServiceDiscountRate(String type) {
+        switch (type) {
+            case "Premium":
+                return serviceDiscountPremium;
+            case "Gold":
+                return serviceDiscountGold;
+            case "Silver":
+                return serviceDiscountSilver;
+            default:
+                throw new IllegalArgumentException("wrong service type specified");
         }
-        else if ("Gold".equalsIgnoreCase(type)) {
-            return serviceDiscountGold;
-        }
-        else if ("Silver".equalsIgnoreCase(type)) {
-            return serviceDiscountSilver;
-        }
-
-        return 0.0;
     }
 
-    static public double getProductDiscountRate(String type) {
-
-        if ("Premium".equalsIgnoreCase(type)) {
-            return productDiscountPremium;
+    public static double getProductDiscountRate(String type) {
+        switch (type) {
+            case "Premium":
+                return productDiscountPremium;
+            case "Gold":
+                return productDiscountGold;
+            case "Silver":
+                return productDiscountSilver;
+            default:
+                throw new IllegalArgumentException("wrong service type specified");
         }
-        else if ("Gold".equalsIgnoreCase(type)) {
-            return productDiscountGold;
-        }
-        else if ("Silver".equalsIgnoreCase(type)) {
-            return productDiscountSilver;
-        }
-
-        return 0.0;
     }
+
 }
 
